@@ -25,6 +25,15 @@ export class CourseCardComponent implements OnInit{
 
   onCourseViewed() {
     console.log('viewing the course');
-    this.courseSelected.emit(this.course)
+    this.courseSelected.emit(this.course);
+    console.log(this.course.category);
+  }
+  cardClasses(){
+    if (this.course.category == 'BEGINNER'){
+      return ['beginner'];
+    }
+  }
+  cardStyles() {
+      return {'background-image':'url('+this.course.iconUrl +')'};
   }
 }
