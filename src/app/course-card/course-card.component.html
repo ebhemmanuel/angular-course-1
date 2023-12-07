@@ -2,8 +2,11 @@
     <div class="course-title">
     {{cardIndex + ' ' + course.description}}
     </div>
+
+
     <img width="300" alt="Angular Logo"
-         [src]="course.iconUrl">
+    *ngIf="isImageVisible()"
+    [src]="course.iconUrl">
 
     <div class="course-description">
         {{course.longDescription}}
