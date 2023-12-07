@@ -39,12 +39,10 @@ button {
 
 course-card.is-first {
   border-top: 2px solid grey;
-  padding-top: 20px;
 }
 
 course-card.is-last {
   border-bottom: 2px solid grey;
-  padding-top: 20px;
 }
 
 course-card.is-even {
