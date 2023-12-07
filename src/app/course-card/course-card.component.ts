@@ -11,7 +11,7 @@ export class CourseCardComponent implements OnInit{
   @Input()
   course: Course;  
 
-  @Input({required: true})
+  @Input()
   cardIndex:  number;
 
   @Output('courseSelected')

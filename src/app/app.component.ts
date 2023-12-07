@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import {COURSES} from '../db-data';
 import { Course } from './model/course';
+import { CourseCardComponent } from './course-card/course-card.component';
 
 @Component({
   selector: 'app-root',
@@ -11,12 +12,10 @@ export class AppComponent {
 
   // courses = [];
   courses = COURSES;
+  @ViewChild(CourseCardComponent)
+  card: CourseCardComponent;
 
   onCourseSelected(course:Course) {
-    console.log("Click event bubbled...", course);
-  }
-
-  trackCourse(index:number, course:Course) {
-    return course.id;
+    console.log(this.card);
   }
 }
